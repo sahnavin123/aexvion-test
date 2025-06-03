@@ -11,7 +11,7 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: "/aexvion",
+  base: "/aexvion-test",
   build: {
     outDir: "dist",
   },
