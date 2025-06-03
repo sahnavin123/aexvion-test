@@ -3,7 +3,6 @@ import { Card, CardAction, CardContent } from "./ui/card";
 import Icon from "@mdi/react";
 import { Button } from "./ui/button";
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const ProfileCard = ({
   data,
   setProfile,

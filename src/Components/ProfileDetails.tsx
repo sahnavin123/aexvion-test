@@ -1,4 +1,3 @@
-import React from "react";
 import { Button } from "./ui/button";
 import Icon from "@mdi/react";
 import { mdiAccountCogOutline, mdiShareVariantOutline } from "@mdi/js";

@@ -1,4 +1,3 @@
-import React from "react";
 import { Input } from "./ui/input";
 import { mdiChevronDown, mdiFilterOutline, mdiMagnify } from "@mdi/js";
 import Icon from "@mdi/react";
