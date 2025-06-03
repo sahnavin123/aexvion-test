@@ -3,6 +3,7 @@ import { mdiChevronDown, mdiFilterOutline, mdiMagnify } from "@mdi/js";
 import Icon from "@mdi/react";
 import { Button } from "./ui/button";
 import { Tabs, TabsList, TabsTrigger } from "./ui/tabs";
+import { BASE_PATH } from "@/constant";
 
 const FilterTab = () => {
   return (
@@ -28,7 +29,12 @@ const FilterTab = () => {
               size="sm"
               className=" text-gray-400 text-xs"
             >
-              <img src="/arrow.svg" alt="arrow" height="16px" width="16px" />
+              <img
+                src={`${BASE_PATH}/arrow.svg`}
+                alt="arrow"
+                height="16px"
+                width="16px"
+              />
               <span>Recent</span>
               <Icon path={mdiChevronDown} size="16px" />
             </Button>
@@ -45,10 +51,10 @@ const FilterTab = () => {
         <Tabs defaultValue="menue">
           <TabsList className="h-[34px]">
             <TabsTrigger value="tab" className="cursor-pointer">
-              <img src="/tab.svg" height="16px" width="16px" />
+              <img src={`${BASE_PATH}/tab.svg`} height="16px" width="16px" />
             </TabsTrigger>
             <TabsTrigger value="menue" className="cursor-pointer">
-              <img src="/menue.svg" height="16px" width="16px" />
+              <img src={`${BASE_PATH}/menue.svg`} height="16px" width="16px" />
             </TabsTrigger>
           </TabsList>
         </Tabs>

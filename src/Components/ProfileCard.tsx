@@ -2,6 +2,7 @@
 import { Card, CardAction, CardContent } from "./ui/card";
 import Icon from "@mdi/react";
 import { Button } from "./ui/button";
+import { BASE_PATH } from "@/constant";
 
 const ProfileCard = ({
   data,
@@ -44,9 +45,13 @@ const ProfileCard = ({
         </CardContent>
         <CardAction>
           <Button variant="outline" onClick={handleClick}>
-            {!isActive && <img src="/expand.svg" height="20px" width="20px" />}
+            {!isActive && (
+              <img src={`${BASE_PATH}/expand.svg`} height="20px" width="20px" />
+            )}
             <p>{isActive ? "Hide" : "Details"}</p>
-            {isActive && <img src="/hide.svg" height="20px" width="20px" />}
+            {isActive && (
+              <img src={`${BASE_PATH}/hide.svg`} height="20px" width="20px" />
+            )}
           </Button>
         </CardAction>
       </div>

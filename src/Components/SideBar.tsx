@@ -1,3 +1,4 @@
+import { BASE_PATH } from "@/constant";
 import {
   mdiPlus,
   mdiHomeOutline,
@@ -108,7 +109,7 @@ const SideBar = () => {
         {/* profile */}
         <div className="flex justify-between p-4">
           <div className="flex gap-2">
-            <img src="/profile.svg" height={32} width={32} />
+            <img src={`${BASE_PATH}/profile.svg`} height={32} width={32} />
             <div>
               <p className="text-black font-medium text-sm">Harry Potter</p>
               <p className="text-xs text-gray-500 font-medium">Free</p>
