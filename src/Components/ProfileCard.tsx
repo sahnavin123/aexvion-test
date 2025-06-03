@@ -31,7 +31,7 @@ const ProfileCard = ({
   return (
     <Card className="p-3">
       <div className="flex items-center justify-between">
-        <CardContent className="flex">
+        <CardContent className="flex p-0">
           <div className="flex gap-4">
             <img src={img} height="48px" width="48px" />
             <div>
