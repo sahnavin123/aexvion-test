@@ -1,22 +1,21 @@
-export const mockData = [
+import { mdiCubeOutline, mdiTrendingUp } from "@mdi/js";
+
+export const profiles = [
   {
-    id: 1,
     name: "Elen",
     role: "Product",
-    avatar: "https://i.pravatar.cc/150?img=1",
-    skills: ["amazon", "notion", "slack", "figma"],
-    benchmark: 1.234,
+    img: "/profile/img-1.svg",
+    roleIcon: mdiCubeOutline,
     description:
-      "Elen is a strategic Product Manager who thrives at the intersection of vision and execution...",
+      "Elen is a strategic Product Manager who thrives at the intersection of vision and execution. She brings clarity to complex product goals, aligning cross-functional teams toward a shared roadmap. With a strong focus on outcomes, Elen ensures every feature delivers meaningful impact.",
   },
   {
-    id: 2,
     name: "Kelsier",
     role: "Marketing",
-    avatar: "https://i.pravatar.cc/150?img=2",
-    skills: ["google", "notion"],
-    benchmark: 0.9,
-    description: "Marketing expert focusing on strategy and performance...",
+    img: "/profile/img-2.svg",
+    roleIcon: mdiTrendingUp,
+    description:
+      "Elen is a strategic Product Manager who thrives at the intersection of vision and execution. She brings clarity to complex product goals, aligning cross-functional teams toward a shared roadmap. With a strong focus on outcomes, Elen ensures every feature delivers meaningful impact.",
   },
   // Add more as needed
 ];
