@@ -71,15 +71,17 @@ const SideBar = () => {
 
   return (
     <div className="max-w-[224px]  border-x-2 border-gray-300">
-      <div className="w-[217.5px] h-[48px] border-y-2 border-gray-300 flex items-center justify-center space-x-2 px-3 py-3 gap-2">
-        <img
-          className="cursor-pointer"
-          src={`${BASE_PATH}/logo.svg`}
-          height={24}
-          width={24}
-          alt="logo"
-        />
-        <p className="text-black font-bold">Aexvion</p>
+      <div className="w-[217.5px] h-[48px] justify-between border-y-2 border-gray-300 flex items-center space-x-2 px-3 py-3 gap-2">
+        <div className="flex gap-[10px] p-2">
+          <img
+            className="cursor-pointer"
+            src={`${BASE_PATH}/logo.svg`}
+            height={24}
+            width={24}
+            alt="logo"
+          />
+          <p className="text-black font-bold">Aexvion</p>
+        </div>
         <img
           className="cursor-pointer"
           src={`${BASE_PATH}/side-bar.svg`}
