@@ -24,7 +24,6 @@ const tabItems = [
   },
 ];
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const MidSection = ({
   setProfile,
   setShowProfile,
