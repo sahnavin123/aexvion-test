@@ -1,11 +1,12 @@
 import { Button } from "./ui/button";
 import Icon from "@mdi/react";
 import { mdiAccountCogOutline, mdiShareVariantOutline } from "@mdi/js";
+import BenchmarkDonutChart from "./BenchmarkDonutChart";
+import SkillSection from "./SkillSection";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const ProfileDetails = ({ data }: { data: any }) => {
-  const { name, role, img, description } = data;
-  console.log(data, "data");
+  const { name, role, img, description, chartData, skills } = data;
   return (
     <div className="p-4 w-full flex flex-col gap-6 overflow-y-scroll">
       <div className="flex items-center gap-6">
@@ -29,6 +30,8 @@ export const ProfileDetails = ({ data }: { data: any }) => {
         <p className="text-lg font-bold">Description</p>
         <p className="text-gray-500">{description}</p>
       </div>
+      <BenchmarkDonutChart data={chartData} />
+      <SkillSection data={skills} />
     </div>
   );
 };

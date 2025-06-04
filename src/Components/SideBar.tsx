@@ -70,62 +70,80 @@ const SideBar = () => {
   ];
 
   return (
-    <div
-      style={{ height: "-webkit-fill-available" }}
-      className="max-w-[224px]  flex flex-col justify-between border-x-2 border-gray-300"
-    >
-      <div className="p-4">
-        <button className="bg-[#F8F9FB] flex items-center justify-center cursor-pointer gap-2 font-semibold text-sm text-gray-800 rounded-xl border border-gray-200 shadow-sm px-14 py-2  mb-4 ">
-          <Icon path={mdiPlus} size="20px" />
-          <span>Create</span>
-        </button>
-        <div className="space-y-2">
-          {tabs.map((tab, index) => (
-            <CustomTab
-              key={index}
-              iconPath={tab.iconPath}
-              label={tab.label}
-              isActive={activeTopIndex === index}
-              onClick={() => setActiveTopIndex(index)}
-            />
-          ))}
-        </div>
+    <div className="max-w-[224px]  border-x-2 border-gray-300">
+      <div className="w-[217.5px] h-[48px] border-y-2 border-gray-300 flex items-center justify-center space-x-2 px-3 py-3 gap-2">
+        <img
+          className="cursor-pointer"
+          src={`${BASE_PATH}/logo.svg`}
+          height={24}
+          width={24}
+          alt="logo"
+        />
+        <p className="text-black font-bold">Aexvion</p>
+        <img
+          className="cursor-pointer"
+          src={`${BASE_PATH}/side-bar.svg`}
+          alt="side-bar"
+        />
       </div>
-      {/* bottom div */}
-      <div>
-        <div className="border-b-2 border-gray-300">
-          <div className="space-y-2 p-4 ">
-            {bottomTabs.map((tab, index) => (
+
+      <div
+        style={{ height: "calc(100% - 48px)" }}
+        className="flex flex-col justify-between "
+      >
+        <div className="p-4">
+          <button className="bg-[#F8F9FB] flex items-center justify-center cursor-pointer gap-2 font-semibold text-sm text-gray-800 rounded-xl border border-gray-200 shadow-sm px-14 py-2  mb-4 ">
+            <Icon path={mdiPlus} size="20px" />
+            <span>Create</span>
+          </button>
+          <div className="space-y-2">
+            {tabs.map((tab, index) => (
               <CustomTab
                 key={index}
                 iconPath={tab.iconPath}
                 label={tab.label}
-                isActive={activeBottomIndex === index}
-                onClick={() => setActiveBottomIndex(index)}
+                isActive={activeTopIndex === index}
+                onClick={() => setActiveTopIndex(index)}
               />
             ))}
           </div>
         </div>
-        {/* profile */}
-        <div className="flex justify-between p-4">
-          <div className="flex gap-2">
-            <img src={`${BASE_PATH}/profile.svg`} height={32} width={32} />
-            <div>
-              <p className="text-black font-medium text-sm">Harry Potter</p>
-              <p className="text-xs text-gray-500 font-medium">Free</p>
+        {/* bottom div */}
+        <div className="flex flex-col ">
+          <div className="border-b-2 border-gray-300">
+            <div className="space-y-2 p-4 ">
+              {bottomTabs.map((tab, index) => (
+                <CustomTab
+                  key={index}
+                  iconPath={tab.iconPath}
+                  label={tab.label}
+                  isActive={activeBottomIndex === index}
+                  onClick={() => setActiveBottomIndex(index)}
+                />
+              ))}
             </div>
           </div>
-          <div>
-            <Icon
-              path={mdiChevronUp}
-              size="16px"
-              style={{ color: "#808897" }}
-            />
-            <Icon
-              path={mdiChevronDown}
-              size="16px"
-              style={{ color: "#808897" }}
-            />
+          {/* profile */}
+          <div className="flex justify-between p-4">
+            <div className="flex gap-2">
+              <img src={`${BASE_PATH}/profile.svg`} height={32} width={32} />
+              <div>
+                <p className="text-black font-medium text-sm">Harry Potter</p>
+                <p className="text-xs text-gray-500 font-medium">Free</p>
+              </div>
+            </div>
+            <div>
+              <Icon
+                path={mdiChevronUp}
+                size="16px"
+                style={{ color: "#808897" }}
+              />
+              <Icon
+                path={mdiChevronDown}
+                size="16px"
+                style={{ color: "#808897" }}
+              />
+            </div>
           </div>
         </div>
       </div>

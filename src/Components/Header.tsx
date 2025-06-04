@@ -1,7 +1,6 @@
 import { mdiAccountMultipleOutline, mdiCreditCardOutline } from "@mdi/js";
 import { Tabs, TabsList, TabsTrigger } from "./ui/tabs";
 import Icon from "@mdi/react";
-import { BASE_PATH } from "@/constant";
 
 const tabItems = [
   { value: "team", label: "Team", icon: mdiAccountMultipleOutline },
@@ -14,22 +13,7 @@ const tabItems = [
 
 const Header = () => {
   return (
-    <div className="flex items-center border-b-2 border-gray-300 ">
-      <div className="w-[217.5px] flex items-center justify-center space-x-2 px-3 py-3 gap-2 border-x-2">
-        <img
-          className="cursor-pointer"
-          src={`${BASE_PATH}/logo.svg`}
-          height={24}
-          width={24}
-          alt="logo"
-        />
-        <p className="text-black font-bold">Aexvion</p>
-        <img
-          className="cursor-pointer"
-          src={`${BASE_PATH}/side-bar.svg`}
-          alt="side-bar"
-        />
-      </div>
+    <div className="flex h-[48px] items-center border-b-2 border-gray-300 ">
       <div className="flex items-center gap-6 px-4">
         <p className="font-bold">Management</p>
         <Tabs defaultValue="team" className="w-full">

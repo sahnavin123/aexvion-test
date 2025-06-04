@@ -10,8 +10,7 @@ const TeamManagement = () => {
   const [profile, setProfile] = useState(profiles[0]);
   const [showProfile, setShowProfile] = useState<boolean>(false);
   return (
-    <div className="flex flex-col h-screen">
-      <Header />
+    <div className="flex flex-col h-[100vh] overflow-hidden">
       <div className="flex h-full">
         <SideBar />
         {/* center screen */}
@@ -20,6 +19,7 @@ const TeamManagement = () => {
             showProfile ? "min-w-[636px] border-r-2 border-gray-300" : "w-full"
           }`}
         >
+          <Header />
           <FilterTab />
           <MidSection setProfile={setProfile} setShowProfile={setShowProfile} />
         </div>
