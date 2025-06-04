@@ -64,7 +64,7 @@ const ProfileCard = ({
     <Card className="p-3">
       <div className="flex items-center justify-between">
         <CardContent className="flex p-0 w-full justify-between">
-          <div className="flex gap-4">
+          <div className="flex gap-4 w-[180px]">
             <img src={img} height="48px" width="48px" />
             <div>
               <p className="font-medium">{name}</p>
@@ -74,18 +74,25 @@ const ProfileCard = ({
               </div>
             </div>
           </div>
-          <div className="flex items-center gap-[26px] justify-center">
-            <div className="flex items-center">
+          <div
+            className={`flex items-center  gap-[26px] 
+              ${!showProfile ? "w-[480px]" : ""}
+              `}
+          >
+            <div className="w-[44px] flex items-center justify-evenly gap-1">
               {details.orgLogo && (
-                <img src={details.orgLogo} height={"20px"} width={"20px"} />
+                <img src={details.orgLogo} height="20" width="20" />
               )}
-              {badge && <img src={badge} height="20px" width="20px" />}
+              {badge && <img src={badge} height="20" width="20" />}
             </div>
-            {!showProfile && (
-              <p className="text-sm  text-[#666D80] font-[400] max-w-[376px]">
-                {description.split(".")[0]}.
-              </p>
-            )}
+
+            <div className="w-full">
+              {!showProfile && (
+                <p className="text-sm text-[#666D80] font-[400] max-w-[376px] leading-[150%]">
+                  {description.split(".")[0]}.
+                </p>
+              )}
+            </div>
           </div>
           <SkillAvatarGroup skills={skillSet} />
         </CardContent>
