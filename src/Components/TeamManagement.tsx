@@ -21,7 +21,11 @@ const TeamManagement = () => {
         >
           <Header />
           <FilterTab />
-          <MidSection setProfile={setProfile} setShowProfile={setShowProfile} />
+          <MidSection
+            setProfile={setProfile}
+            showProfile={showProfile}
+            setShowProfile={setShowProfile}
+          />
         </div>
         {showProfile && <ProfileDetails data={profile} />}
       </div>

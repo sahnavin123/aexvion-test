@@ -1,38 +1,3 @@
-// import { mdiCubeOutline, mdiTrendingUp } from "@mdi/js";
-// export const BASE_PATH = import.meta.env.BASE_URL;
-
-// export const profiles = [
-//   {
-//     name: "Elen",
-//     role: "Product",
-//     img: `${BASE_PATH}/profile/img-1.svg`,
-//     roleIcon: mdiCubeOutline,
-//     description:
-//       "Elen is a strategic Product Manager who thrives at the intersection of vision and execution. She brings clarity to complex product goals, aligning cross-functional teams toward a shared roadmap. With a strong focus on outcomes, Elen ensures every feature delivers meaningful impact.",
-//     chartData: [
-//       { name: "Lorem", value: 30, color: "#5E1AE5" }, // purple
-//       { name: "Ipsum", value: 40, color: "#EA580C" }, // orange
-//       { name: "Dolor", value: 10, color: "#86EFAC" }, // light green
-//       { name: "Sit amet", value: 20, color: "#D1D5DB" }, // gray
-//     ],
-//   },
-//   {
-//     name: "Kelsier",
-//     role: "Marketing",
-//     img: `${BASE_PATH}/profile/img-2.svg`,
-//     roleIcon: mdiTrendingUp,
-//     description:
-//       "Elen is a strategic Product Manager who thrives at the intersection of vision and execution. She brings clarity to complex product goals, aligning cross-functional teams toward a shared roadmap. With a strong focus on outcomes, Elen ensures every feature delivers meaningful impact.",
-//     chartData: [
-//       { name: "Lorem", value: 30, color: "#5E1AE5" }, // purple
-//       { name: "Ipsum", value: 40, color: "#EA580C" }, // orange
-//       { name: "Dolor", value: 10, color: "#86EFAC" }, // light green
-//       { name: "Sit amet", value: 20, color: "#D1D5DB" }, // gray
-//     ],
-//   },
-//   // Add more as needed
-// ];
-
 import {
   mdiCubeOutline,
   mdiTrendingUp,
@@ -48,6 +13,14 @@ export const profiles = [
     role: "Product",
     img: `${BASE_PATH}/profile/img-1.svg`,
     roleIcon: mdiCubeOutline,
+    badge: `${BASE_PATH}badge.svg`,
+    skillSet: [
+      { name: "Jira", img: `${BASE_PATH}/skills/jira.svg` },
+      { name: "Slack", img: `${BASE_PATH}/skills/slack.svg` },
+      { name: "Miro", img: `${BASE_PATH}/skills/miro.svg` },
+      { name: "Amplitude", img: `${BASE_PATH}/skills/amplitude.svg` },
+      { name: "Asana", img: `${BASE_PATH}/skills/asana.svg` },
+    ],
     description:
       "Elen is a strategic Product Manager who thrives at the intersection of vision and execution. She brings clarity to complex product goals, aligning cross-functional teams toward a shared roadmap. With a strong focus on outcomes, Elen ensures every feature delivers meaningful impact.",
     skills: [
@@ -83,12 +56,29 @@ export const profiles = [
       { name: "Dolor", value: 10, color: "#86EFAC" },
       { name: "Sit amet", value: 20, color: "#D1D5DB" },
     ],
+    details: {
+      workedAt: "Amazon",
+      teamType: "Product Development",
+      lastUpdatedAt: "15/02/2025",
+      orgLogo: `${BASE_PATH}amazon.svg`,
+    },
   },
   {
     name: "Kelsier",
     role: "Marketing",
     img: `${BASE_PATH}/profile/img-2.svg`,
     roleIcon: mdiTrendingUp,
+
+    skillSet: [
+      { name: "Jira", img: `${BASE_PATH}/skills/jira.svg` },
+      { name: "Slack", img: `${BASE_PATH}/skills/slack.svg` },
+      { name: "Miro", img: `${BASE_PATH}/skills/miro.svg` },
+    ],
+    details: {
+      workedAt: "Google",
+      teamType: "Marketing",
+      lastUpdatedAt: "16/02/2025",
+    },
     description:
       "Kelsier is a bold Marketing Director who leverages data to tell compelling brand stories. He drives user engagement through integrated campaigns that connect emotionally with audiences while achieving high ROI.",
     skills: [
@@ -129,6 +119,16 @@ export const profiles = [
     name: "Marin",
     role: "Design",
     img: `${BASE_PATH}/profile/img-3.svg`,
+
+    details: {
+      workedAt: "Amazon",
+      teamType: "Design",
+      lastUpdatedAt: "20/02/2025",
+    },
+    skillSet: [
+      { name: "Slack", img: `${BASE_PATH}/skills/slack.svg` },
+      { name: "Amplitude", img: `${BASE_PATH}/skills/amplitude.svg` },
+    ],
     roleIcon: mdiLightbulbOutline,
     description:
       "Marin is a visionary Design Lead passionate about intuitive user experiences. She combines aesthetics with functionality to create interfaces that delight users and drive business results.",
@@ -171,6 +171,18 @@ export const profiles = [
     role: "Finance",
     img: `${BASE_PATH}/profile/img-4.svg`,
     roleIcon: mdiFinance,
+    details: {
+      workedAt: "Amazon",
+      teamType: "Finance",
+      lastUpdatedAt: "18/02/2025",
+    },
+    skillSet: [
+      { name: "Jira", img: `${BASE_PATH}/skills/jira.svg` },
+      { name: "Slack", img: `${BASE_PATH}/skills/slack.svg` },
+      { name: "Miro", img: `${BASE_PATH}/skills/miro.svg` },
+      { name: "Amplitude", img: `${BASE_PATH}/skills/amplitude.svg` },
+      { name: "Asana", img: `${BASE_PATH}/skills/asana.svg` },
+    ],
     description:
       "Tomas leads Finance with precision and foresight. He turns raw numbers into strategic insight, ensuring sustainable growth through responsible planning and forecasting.",
     skills: [
@@ -211,7 +223,17 @@ export const profiles = [
     name: "Lina",
     role: "Operations",
     img: `${BASE_PATH}/profile/img-4.svg`,
+    badge: `${BASE_PATH}badge.svg`,
+    skillSet: [
+      { name: "Amplitude", img: `${BASE_PATH}/skills/amplitude.svg` },
+      { name: "Miro", img: `${BASE_PATH}/skills/miro.svg` },
+    ],
     roleIcon: mdiAccountTie,
+    details: {
+      workedAt: "Google",
+      teamType: "Operations",
+      lastUpdatedAt: "15/02/2025",
+    },
     description:
       "Lina orchestrates Operations like a well-tuned machine. With a sharp eye for optimization, she bridges teams, processes, and systems to maximize efficiency at scale.",
     skills: [

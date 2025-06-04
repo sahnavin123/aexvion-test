@@ -28,9 +28,11 @@ const tabItems = [
 export const MidSection = ({
   setProfile,
   setShowProfile,
+  showProfile,
 }: {
   setProfile: any;
   setShowProfile: (value: boolean) => void;
+  showProfile: boolean;
 }) => {
   const [activeProfileIndex, setActiveProfileIndex] = useState<number | null>(
     null
@@ -68,6 +70,7 @@ export const MidSection = ({
             key={index}
             setProfile={setProfile}
             data={data}
+            showProfile={showProfile}
             setShowProfile={setShowProfile}
             isActive={activeProfileIndex === index}
             onToggle={() =>

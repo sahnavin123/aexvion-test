@@ -8,9 +8,13 @@ import {
   SelectTrigger,
   SelectValue,
 } from "./ui/select";
+import { useState } from "react";
 
 export default function BenchmarkDonutChart({ data }: { data: any }) {
   const total = data.reduce((sum: any, item: any) => sum + item.value, 0);
+  const [selected, setSelected] = useState("");
+
+  console.log(selected, "selected");
 
   return (
     <Card className="p-6">
@@ -26,13 +30,16 @@ export default function BenchmarkDonutChart({ data }: { data: any }) {
             <span className="text-sm font-normal align-bottom">%</span>
           </p>
         </div>
-        <Select>
-          <SelectTrigger size="sm" className="w-[105px] rounded-[10px]">
+        <Select value={selected} onValueChange={setSelected}>
+          <SelectTrigger
+            size="sm"
+            className="w-[115px] text-[#666D80] font-[500] text-xs rounded-[10px]"
+          >
             <SelectValue placeholder="Selection 1" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="1">Selection 1</SelectItem>
-            <SelectItem value="2">Selection 2</SelectItem>
+            <SelectItem value="Selection 1">Selection 1</SelectItem>
+            <SelectItem value="Selection 2">Selection 2</SelectItem>
           </SelectContent>
         </Select>
       </div>
