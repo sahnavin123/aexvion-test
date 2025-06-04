@@ -71,7 +71,7 @@ const SideBar = () => {
 
   return (
     <div className="max-w-[224px]  border-x-2 border-gray-300">
-      <div className="w-[217.5px] h-[48px] justify-between border-y-2 border-gray-300 flex items-center space-x-2 px-3 py-3 gap-2">
+      <div className="w-[224px] h-[48px] justify-between border-b-2 border-gray-300 flex items-center space-x-2 px-3 py-3 gap-2">
         <div className="flex gap-[10px] p-2">
           <img
             className="cursor-pointer"
@@ -82,18 +82,20 @@ const SideBar = () => {
           />
           <p className="text-black font-bold">Aexvion</p>
         </div>
-        <img
-          className="cursor-pointer"
-          src={`${BASE_PATH}/side-bar.svg`}
-          alt="side-bar"
-        />
+        <div className="pr-1.5">
+          <img
+            className="cursor-pointer"
+            src={`${BASE_PATH}/side-bar.svg`}
+            alt="side-bar"
+          />
+        </div>
       </div>
 
       <div
         style={{ height: "calc(100% - 48px)" }}
         className="flex flex-col justify-between "
       >
-        <div className="p-4">
+        <div className="p-4 border-b-2 border-gray-300 ">
           <button className="bg-[#F8F9FB] flex items-center justify-center cursor-pointer gap-2 font-semibold text-sm text-gray-800 rounded-xl border border-gray-200 shadow-sm px-14 py-2  mb-4 ">
             <Icon path={mdiPlus} size="20px" />
             <span>Create</span>
