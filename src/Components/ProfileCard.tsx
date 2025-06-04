@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Card, CardAction, CardContent } from "./ui/card";
+import { Card, CardContent } from "./ui/card";
 import Icon from "@mdi/react";
 import { Button } from "./ui/button";
 import { BASE_PATH } from "@/constant";
