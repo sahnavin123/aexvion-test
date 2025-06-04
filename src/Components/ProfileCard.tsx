@@ -96,7 +96,11 @@ const ProfileCard = ({
           <SkillAvatarGroup skills={skillSet} />
         </CardContent>
         <CardAction>
-          <Button variant="outline" onClick={handleClick}>
+          <Button
+            variant="outline"
+            className="text-sm font-[600]"
+            onClick={handleClick}
+          >
             {!isActive && (
               <img src={`${BASE_PATH}/expand.svg`} height="20px" width="20px" />
             )}
