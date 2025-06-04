@@ -9,7 +9,7 @@ const SkillSetSection = ({ data }: any) => {
         {data.map(({ name, img }: any, index: number) => (
           <div key={index} className="flex w-[150px]  items-center gap-2">
             <img src={img} alt={name} height="24px" width="24px" />
-            <span className="text-sm font-medium">{name}</span>
+            <span className="text-sm font-semibold">{name}</span>
           </div>
         ))}
         <div className="flex items-center justify-end">
