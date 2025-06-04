@@ -40,7 +40,7 @@ export const ProfileDetails = ({ data }: { data: any }) => {
 
       <div className=" flex flex-col p-6 gap-1 border-2 border-gray-200 rounded-lg">
         <p className="text-lg font-bold">Description</p>
-        <p className="text-gray-500">{description}</p>
+        <p className="text-xs font-[400] text-gray-500">{description}</p>
       </div>
       <BenchmarkDonutChart data={chartData} />
       <SkillSection data={skills} />
