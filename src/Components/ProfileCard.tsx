@@ -61,7 +61,7 @@ const ProfileCard = ({
     onToggle();
   };
   return (
-    <Card className="p-3">
+    <Card className="p-3 ">
       <div className="flex items-center justify-between">
         <CardContent className="flex p-0 w-full justify-between">
           <div className="flex gap-4 w-[180px]">
@@ -95,7 +95,7 @@ const ProfileCard = ({
           </div>
           <SkillAvatarGroup skills={skillSet} />
         </CardContent>
-        <div className="flex justify-center h-full items-center">
+        <div className="flex justify-center h-full items-center pr-[10px]">
           <Button
             variant="outline"
             className="text-sm font-[600]"
