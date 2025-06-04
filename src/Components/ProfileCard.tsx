@@ -95,7 +95,7 @@ const ProfileCard = ({
           </div>
           <SkillAvatarGroup skills={skillSet} />
         </CardContent>
-        <CardAction>
+        <div className="flex justify-center h-full items-center">
           <Button
             variant="outline"
             className="text-sm font-[600]"
@@ -109,7 +109,7 @@ const ProfileCard = ({
               <img src={`${BASE_PATH}/hide.svg`} height="20px" width="20px" />
             )}
           </Button>
-        </CardAction>
+        </div>
       </div>
     </Card>
   );
