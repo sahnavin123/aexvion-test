@@ -76,8 +76,7 @@ const ProfileCard = ({
           </div>
           <div
             className={`flex items-center  gap-[26px] 
-              ${!showProfile ? "w-[480px]" : ""}
-              `}
+              ${!showProfile ? "w-[480px]" : ""} `}
           >
             <div className="w-[44px] flex items-center justify-evenly gap-1">
               {details.orgLogo && (
