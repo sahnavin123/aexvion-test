@@ -32,8 +32,8 @@ const CustomTab: React.FC<CustomTabProps> = ({
   return (
     <div
       onClick={onClick}
-      className={`flex rounded-lg items-center gap-2 cursor-pointer font-medium ${
-        isActive ? "bg-[#F8F9FB] text-gray-900 " : "text-gray-500"
+      className={`flex rounded-lg items-center gap-2 cursor-pointer text-sm  ${
+        isActive ? "bg-[#F8F9FB] text-gray-900  font-[700]" : "text-gray-500"
       } p-2 rounded ${className} relative`}
     >
       {isActive && (
@@ -98,7 +98,7 @@ const SideBar = () => {
             <Icon path={mdiPlus} size="20px" />
             <span>Create</span>
           </button>
-          <div className="space-y-2">
+          <div>
             {tabs.map((tab, index) => (
               <CustomTab
                 key={index}
