@@ -12,7 +12,7 @@ const SkillSetSection = ({ data }: any) => {
             <span className="text-sm font-semibold">{name}</span>
           </div>
         ))}
-        <div className="flex items-center justify-end">
+        <div className="flex items-center">
           <Button
             variant={"outline"}
             size={"sm"}
